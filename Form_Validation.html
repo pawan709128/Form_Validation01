@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="Form_Validation.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body> 
+    <div class="form-container">
+      <h2>Registration Form</h2>
+      <form onsubmit="return validateForm()">
+          <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+              <span id="name_error" class="error-message"><i class="fa-solid fa-circle-exclamation"></i> Please enter your Name</span>
+          </div>
+          <div class="form-group">
+              <label for="father-name">Father's Name:</label>
+              <input type="text" id="father-name" name="father-name">
+              <span id="father_name_error" class="error-message"><i class="fa-solid fa-circle-exclamation"></i> Please enter your Father's Name</span>
+          </div>
+          <div class="form-group">
+              <label for="mobile">Mobile Number:</label>
+              <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}">
+              <span id="mobile_error" class="error-message"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid 10-digit mobile number</span>
+          </div>
+          <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email">
+              <span id="email_error" class="error-message"><i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address</span>
+          </div>
+          <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password">
+          </div>
+          <div class="form-group">
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" name="confirm-password">
+          </div>
+          <div class="form-group">
+              <input type="submit" value="Submit">
+          </div>
+      </form>
+    </div>
+    <script src="Form_Validation.js"></script>
+</body>
+</html>
